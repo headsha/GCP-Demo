@@ -5,8 +5,8 @@ metadata:
     app : elasticsearch
     component: elasticsearch
     release: elasticsearch
-    role: master
-  name: elasticsearch
+    role: data
+  name: es-data
 spec:
   podManagementPolicy: Parallel
   replicas: 3
@@ -37,7 +37,7 @@ spec:
           value: "false"
         image: elasticsearch:6.5.0
         imagePullPolicy: IfNotPresent
-        name: es-master
+        name: es-data
         ports:
         - containerPort: 9200
           name: http
