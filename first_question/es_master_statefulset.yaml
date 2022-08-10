@@ -6,7 +6,7 @@ metadata:
     component: elasticsearch
     release: elasticsearch
     role: master
-  name: elasticsearch
+  name: es-master
 spec:
   podManagementPolicy: Parallel
   replicas: 3
