@@ -14,3 +14,5 @@ This is to setup an Event driven architecture where in, whenever a VM instance i
 protoPayload.methodName=("v1.compute.instances.start" OR "v1.compute.instances.stop")
 
 2.)  In Pub/Sub, a Cloud Function trigger is created with its source as the topic created in the first step.
+
+3.) Cloud Function then decodes the log data to fetch the required fields, it then adds it to text file and pushes to a Cloud Storage Bucket.
