@@ -1,5 +1,8 @@
-FIRST QUESTION
-This is to deploy elasticsearch on Kubernetes.
+This repo has two self study scenarios. 
+
+FIRST SCENARIO
+This is to deploy elasticsearch on Kubernetes and verify its health when one pod is force deleted.
+
 There are two statefulset files in this folder, one for deploying 3 master pods and one for deploying 3 data pods.
 Both Statefulset are exactly the same except for the statefulset and contrainer names, both are pointing to a service exposed as a LoadBalancer.
 The health was verified by running <curl -XGET 'ELB:9200/_cluster/health?pretty'>
@@ -7,7 +10,7 @@ The health was verified by running <curl -XGET 'ELB:9200/_cluster/health?pretty'
 
 
 
-SECOND QUESTION
+SECOND SCENARIO
 This is to setup an Event driven architecture where in, whenever a VM instance is Stopped or Started, data such as VM name , VM ID , start time and end time are stored in a text file in Cloud Storage.
 
  1.)Whenever a VM instance is Stopped or Started, the corresponding logs are exported to a Pub/Sub topic using a Log routing Sink. The filter used by the Sink is as follows:
